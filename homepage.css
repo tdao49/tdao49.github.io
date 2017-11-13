@@ -79,7 +79,7 @@ section{
 section header{
   text-align: center;
   padding-top: .5em;
-  padding-bottom: .1em;
+  padding-bottom: .2em;
   color: blue;
 }
 section:nth-child(even){
