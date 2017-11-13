@@ -22,10 +22,11 @@ nav a{
 
 nav a:hover{
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* navigation hamburger menu */
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 52em) {
 
   /* not the hamburger menu*/
   nav a:not(:first-child){
@@ -42,7 +43,7 @@ nav a:hover{
 }
 
 /* not hamburger Menu*/
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 52em) {
 
   /* hamburger menu */
   nav a:first-child{
@@ -71,13 +72,14 @@ body{
 section{
     overflow: auto;
     /*padding-top: 1em;*/
-    padding-bottom: 1.3em;
+    padding-bottom: 2em;
     padding-left: 1.2em;
     padding-right: 1.2em;
 }
 section header{
   text-align: center;
   padding-top: .5em;
+  color: blue;
 }
 section:nth-child(even){
   background-color: #eceeef;
@@ -95,11 +97,11 @@ section header h1{
     height: 20em;
 }
 #home header{
-    top: 40%;
+    top: 35%;
     position: relative;
 }
 #home header h1{
-  font-size: 3em;
+  font-size: 2.5em;
 }
 #home header p{
   font-style: italic;
@@ -114,7 +116,6 @@ section header h1{
 
 /*  background section*/
 .my-image{
-  float: left;
   text-align: center;
 }
 
@@ -151,14 +152,27 @@ section header h1{
 }
 
 
+@media screen and (min-width: 57em) {
+  .my-image{
+    float:left;
+  }
+}
+
+
+
+
+/* Experience and Projects Section header description */
 .section-header-description{
   font-size: .7em;
-  padding-bottom: 1.3em;
+  padding-bottom: 1.5em;
   text-align: center;
   margin: 0;
-  padding-left: 7em;
-  padding-right: 7em;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  font-style: italic;
 }
+
+
 
 
 
@@ -176,6 +190,11 @@ section header h1{
   line-height: .8em;
 }
 
+.experience-language-grid h2{
+    font-size: 2em;
+    text-decoration: underline;
+}
+
 .experience-software-grid{
   grid-column-start: col6;
   grid-column-end: span 4;
@@ -188,9 +207,13 @@ section header h1{
   line-height: .8em;
 }
 
+.experience-software-grid h2{
+  font-size: 2em;
+  text-decoration: underline;
+}
 
 /* media query for experience section*/
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 49em) {
   /* grid layout for experience section */
   .grid-container-ten{
     display: grid;
