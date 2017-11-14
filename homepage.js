@@ -7,7 +7,6 @@ $(document).ready(function(){
   // onclick on the menu to navagation to different section of the page
   $(navSectionLinks).click(function(){
 
-
       var destinatePos = $($(this).attr('href')).offset().top;
 
       if($(hamburgerMenu).css('display') == 'block'){
@@ -22,7 +21,7 @@ $(document).ready(function(){
   });
 
 
-  // When hamburger Menu got click
+  // When hamburger Menu got click. Open the section navigation drop down
   // notes: nav a:first-child == hamburger Menu
 
   $(hamburgerMenu).click(function(){

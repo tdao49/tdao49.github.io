@@ -25,7 +25,7 @@ nav a:hover{
   text-decoration: underline;
 }
 
-/* navigation hamburger menu */
+/* navigation into hamburger menu */
 @media screen and (max-width: 65em) {
 
   /* not the hamburger menu*/
@@ -42,7 +42,7 @@ nav a:hover{
 
 }
 
-/* not hamburger Menu*/
+/* navigation will be different menu button*/
 @media screen and (min-width: 65em) {
 
   /* hamburger menu */
@@ -176,7 +176,7 @@ section header h1{
   }
 }
 
-/* move image on top of the background description*/
+/* resize the image when screen size get too small*/
 @media screen and (max-width: 25em) {
   .my-image img{
     width: 100%;
@@ -236,9 +236,9 @@ section header h1{
   text-decoration: underline;
 }
 
-/* media query for experience section*/
+/* Experience section merge two column into one column*/
 @media screen and (min-width: 60em) {
-  /* grid layout for experience section */
+
   .grid-container-ten{
     display: grid;
     grid-template-rows: auto;
