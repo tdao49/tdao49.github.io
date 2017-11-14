@@ -26,7 +26,7 @@ nav a:hover{
 }
 
 /* navigation hamburger menu */
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 65em) {
 
   /* not the hamburger menu*/
   nav a:not(:first-child){
@@ -43,7 +43,7 @@ nav a:hover{
 }
 
 /* not hamburger Menu*/
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 65em) {
 
   /* hamburger menu */
   nav a:first-child{
@@ -78,6 +78,7 @@ section{
     padding-right: 1.2em;
 
 }
+
 section header{
   text-align: center;
   padding-top: .3em;
@@ -89,6 +90,7 @@ section:nth-child(even){
 section header h1{
     margin: 0;
     padding: 0;
+    color:#03A9F4;
 }
 
 
@@ -107,6 +109,7 @@ section header h1{
 }
 #home header p{
   font-size: 1em;
+  color: rgb(179, 229, 252);
 }
 
 
@@ -131,14 +134,19 @@ section header h1{
 }
 
 .my-image figcaption button{
-    width: 20em;
-    height: 5em;
+    width: 13em;
+    height: 4em;
     background-color: #008CBA;
+    border-radius: 26px;
+}
+
+.my-image figcaption button:hover{
+    background-color: rgb(34,139,34);
 }
 
 .my-image figcaption button a{
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2em;
     color: white;
 }
 
@@ -157,7 +165,7 @@ section header h1{
 }
 
 
-@media screen and (min-width: 59em) {
+@media screen and (min-width: 55em) {
   .my-image{
     float:left;
   }
@@ -219,7 +227,7 @@ section header h1{
 }
 
 /* media query for experience section*/
-@media screen and (min-width: 54em) {
+@media screen and (min-width: 60em) {
   /* grid layout for experience section */
   .grid-container-ten{
     display: grid;
