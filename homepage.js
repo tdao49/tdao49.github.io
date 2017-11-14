@@ -1,10 +1,8 @@
 var topNavHeight = 0;
-
 var hamburgerMenu = 'nav a:first-child';
 var navSectionLinks = 'nav a:not(:first-child)';
 
-$(document).ready(function()
-{
+$(document).ready(function(){
   topNavHeight = $('nav').height();
   // onclick on the menu to navagation to different section of the page
   $(navSectionLinks).click(function(){
@@ -12,8 +10,7 @@ $(document).ready(function()
 
       var destinatePos = $($(this).attr('href')).offset().top;
 
-      if($(hamburgerMenu).css('display') == 'block')
-      {
+      if($(hamburgerMenu).css('display') == 'block'){
          $(navSectionLinks).removeAttr("style");
       }
 
