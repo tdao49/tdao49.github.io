@@ -18,6 +18,24 @@
   100% { transform: scale(1); opacity: 1;}
 }
 
+.fade-in
+{
+    -webkit-animation-name: appear;
+    -webkit-animation-duration: 3s;
+    animation-name: appear;
+    animation-duration: 3s;
+}
+
+@keyframes appear {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@-webkit-keyframes appear {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
 
 .fade-in-from-bottom-delay
 {
@@ -34,9 +52,9 @@
 .fade-in-from-bottom
 {
   -webkit-animation-name: fadeInFromBottom;
-  -webkit-animation-duration: 1.3s;
+  -webkit-animation-duration: 1.5s;
   animation-name: fadeInFromBottom;
-  animation-duration: 1.3s;
+  animation-duration: 1.5s;
   animation-timing-function: ease;
 }
 

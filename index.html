@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Javascript -->
-  <script src="js/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/homepage.js"></script>
 
   <!-- CSS Style -->
@@ -23,10 +23,11 @@
 
   <nav>
     <a> &#9776; </a>
-    <a href="#home"> Home </a>
-    <a href="#background"> Background </a>
-    <a href="#experiences"> Experiences </a>
-    <a href="#projects"> Projects </a>
+    <a id="home-nav-bar" href="#home" class="active-nav-bar"> Home </a>
+    <a id="background-nav-bar" href="#background"> Background </a>
+    <a id="experiences-nav-bar" href="#experiences"> Experiences </a>
+    <a id="projects-nav-bar" href="#projects"> Projects </a>
+    <a id="contact-nav-bar" href="#contact"> Contact </a>
   </nav>
 
 
@@ -34,8 +35,8 @@
     <!-- intro -->
     <section id="home">
       <header>
-        <h1 class="fade-in-from-bottom-delay"> Tri Xuan Dao </h1>
-        <p class="zoom-out"> Application Developer </p>
+        <h1 id="name" class="fade-in-from-bottom-delay"> Tri Xuan Dao </h1>
+        <p id="title" class="zoom-out"> Application Developer </p>
       </header>
 
     </section>
@@ -43,123 +44,168 @@
     <!-- background -->
 
     <section id="background">
-      <header>
+      <header class="hidden">
         <h1> Background </h1>
-        <hr width="250em" />
       </header>
 
+      <hr/>
 
-
-      <article>
+      <div class="section-content hidden">
         <figure class="my-image">
           <img src="Image/my_portrait.jpg" alt="My Picture" />
-          <figcaption> <button> <a href="mailto:trixuandao@gmail.com" > Send Email </a> </button> </figcaption>
+          <figcaption> <a href="file/Resume.pdf" target="_blank" > My Resume  </a> </figcaption>
         </figure>
 
         <div class="background-description">
-          <p>Hi, My name Tri Xuan Dao. I’m a fifth-year student at the University of California, Irvine, where I major in a field of Computer Science specializing in Information. By summer 2018, I’m expecting to graduate with a Bachelor Degree. Besides that,
-            I also currently intern at the Superior Court of Orange County as an Application Developer, where I help develop and maintain different applications inside the Court House. </p>
+          <p>Hi, My name Tri Xuan Dao. I’m a fifth-year student at the <a href="https://uci.edu/" target="_blank"> University of California, Irvine</a>, where I major in a field of <a href="http://www.ics.uci.edu/prospective/en/degrees/computer-science/" target="_blank"> Computer Science </a> specializing in Information. By summer 2018, I’m expecting to graduate with a Bachelor Degree. Besides that,
+            I also currently intern at the <a href="http://www.occourts.org/" target="_blank"> Superior Court of Orange County </a> as an Application Developer, where I help develop and maintain different applications inside the Court House. </p>
           <p> After graduating, I hope to have an opportunity to work as an application developer in an organization where I can fully utilize my skill and knowledge in computer technology to help contribute to the success of the company. Basically, I want
             to work in an environment that allows me to continue to follow my interest and passion toward computer science. Ultimately, a place that can help me learn and gain new profound knowledge, experience and perspective about a life of a computer
             scientist. At the end of the day, I hope to be able to apply everything I know about programming in order to help me develop an application, which will help transform and improve the lives of people around me. </p>
           <p> Besides being an application developer, I enjoy watching movies, playing video games and hanging out with my friends. On the weekends, I also play different sports such as badminton, basketball and tennis. </p>
         </div>
 
-      </article>
-
-
-
-
+      </div>
     </section>
 
 
     <!-- experience -->
 
     <section id="experiences">
-      <header>
+      <header class="hidden">
         <h1> Experiences </h1>
-        <hr width="240em" />
-        <p class="section-header-description">
-            These are different programming languages and software tools that I had learn and use to develop many of my projects in the past.
-        </p>
       </header>
+      <hr/>
 
-      <article class="grid-container-ten">
-
+      <div class="section-content hidden">
+        <p class="section-header-description">
+          These are different programming languages and software tools that I had learn and use to develop many of my projects in the past.
+        </p>
+        <div class="grid-container-ten">
           <div class="experience-language-grid">
             <h2> Languages </h2>
-            <p> HTML </p>
-            <p> CSS </p>
-            <p> PYTHON </p>
-            <p> JAVA </p>
-            <p> C++ </p>
-            <p> C# </p>
-            <p> JAVASCRIPT </p>
-            <p> SQL </p>
+            <div class="circle"> HTML </div>
+            <div class="circle"> CSS </div>
+            <div class="circle"> Python </div>
+            <div class="circle"> Java </div>
+            <div class="circle"> C++ </div>
+            <div class="circle"> C# </div>
+            <div class="circle"> Javascript </div>
+            <div class="circle"> SQL </div>
           </div>
 
           <div class="experience-software-grid">
             <h2> Softwares</h2>
-            <p> K2 Smartform </p>
-            <p> Visual Studio </p>
-            <p> SQL Server Management Studio</p>
-            <p> Eclipse </p>
-            <p> SharePoint </p>
-            <p> Atom </p>
-            <p> Microsoft Access</p>
+            <div class="circle"> K2 </div>
+            <div class="circle"> Visual Studio </div>
+            <div class="circle"> SQL Server</div>
+            <div class="circle"> Eclipse </div>
+            <div class="circle"> SharePoint </div>
+            <div class="circle"> Atom </div>
+            <div class="circle"> Android Studio </div>
           </div>
 
-      </article>
+        </div>
+      </div>
     </section>
 
 
     <!-- projects -->
     <section id="projects">
-      <header>
+      <header class="hidden">
         <h1> Projects </h1>
-        <hr width="150em" />
+      </header>
+
+      <hr/>
+
+      <div class="section-content hidden">
         <p class="section-header-description">
           Below is a few of my projects that I have developed in the past, ranging from a simple console app to a more advantage android gamming application.
         </p>
+
+        <div class="individual-project">
+          <h4> Paddle Catcher </h4>
+          <p> In a way, the game is similar to pong, where the user has to control the paddle to keep the red ball from hitting the ground. However, for this game, the user is requiring to do more. With the paddle, the user also needs to catch the falling
+            blue dot, preventing the blue surface from rising which can make it more difficult to keep the red ball off the ground. But, don’t worry, the height of the blue surface will reset after the user achieves a certain score. Lastly, beware as
+            the red ball direction might change if it hit a blue dot. </p>
+            <div class="individual-project-lang-tool"> Java </div>
+            <div class="individual-project-lang-tool"> Android Studio </div>
+            <div class="individual-project-lang-tool"> Mobile Gaming </div>
+            <div class="individual-project-lang-tool"> Andorid App </div>
+        </div>
+        <div class="individual-project">
+          <h4> Jumpy Box  </h4>
+          <p> With a simple tap on the screen to control the box, the game is easy to play. However, it is difficult to master. In the game, the main purpose is trying to obtain the highest score by continually jumping on top of those fast-moving bars, ensuring
+            that the box will not crush by them. Also, beware of the red ball as the game could end if it hit the box. </p>
+            <div class="individual-project-lang-tool"> Java </div>
+            <div class="individual-project-lang-tool"> Android Studio </div>
+            <div class="individual-project-lang-tool"> Mobile Gaming </div>
+            <div class="individual-project-lang-tool"> Andorid App </div>
+        </div>
+
+        <div class="individual-project">
+          <h4> Sudoku Solver  </h4>
+          <p> Implementing in C++, this application enable the user to quickly solve and display the solution for any Sudoku problem set, even for the most difficult one.</p>
+          <div class="individual-project-lang-tool"> C++ </div>
+          <div class="individual-project-lang-tool"> Visual Studio </div>
+          <div class="individual-project-lang-tool"> Console App</div>
+        </div>
+
+        <div class="individual-project">
+          <h4> GPA Calculator  </h4>
+          <p>  I have developed an easy to use and a responsive web app to help calculate and compute the current GPA for a given set of classes for the semester/quarter. </p>
+          <div class="individual-project-lang-tool"> HTML </div>
+          <div class="individual-project-lang-tool"> CSS </div>
+          <div class="individual-project-lang-tool"> Javascript </div>
+          <div class="individual-project-lang-tool"> Web App </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- contact -->
+    <section id="contact">
+      <header class="hidden">
+        <h1> Contact </h1>
       </header>
 
-      <article>
+      <hr/>
+
+      <div class="section-content hidden">
+        <div class="section-header-description">
+            Please feel free to send me a message!
+        </div>
 
 
-          <div class="individual-project">
-              <h4> Paddle Catcher </h4>
-              <p> In a way, the game is similar to pong, where the user has to control the paddle to keep the red ball from hitting the ground. However, for this game, the user is requiring to do more. With the paddle, the user also needs to catch the falling blue dot, preventing the blue surface from rising which can make it more difficult to keep the red ball off the ground. But, don’t worry, the height of the blue surface will reset after the user achieves a certain score. Lastly, beware as the red ball direction might change if it hit a blue dot. </p>
-          </div>
-          <div class="individual-project">
-              <h4> Jumpy Box  </h4>
-              <p> With a simple tap on the screen to control the box, the game is easy to play. However, it is difficult to master. In the game, the main purpose is trying to obtain the highest score by continually jumping on top of those fast-moving bars, ensuring that the box will not crush by them. Also, beware of the red ball as the game could end if it hit the box. </p>
-          </div>
+        <!-- I use https://formspree.io/ to help create a contact form-->
+        <form  action="https://formspree.io/trixuandao@gmail.com" method="POST" target="_blank">
+          <input type="text" name="_gotcha" style="display:none"  />
+          <input type="hidden" name="_language" value="en" />
+          <label> Name</label>
+          <input type="text" name="name" required>
+          <label> Email </label>
+          <input type="email" name="_replyto" required>
+          <label> Subject </label>
+          <input type="subject" name="_subject" required>
+          <label> Message </label>
+          <textarea rows="4" type="text" name="message" required></textarea>
 
-          <div class="individual-project">
-              <h4> Sudoku Solver  </h4>
-              <p> Implementing in C++, this application enable the user to quickly solve and display the solution for any Sudoku problem set,
-                  even for the most difficult one.</p>
-          </div>
-
-          <div class="individual-project">
-              <h4> GPA Calculator  </h4>
-              <p> Using HTML, CSS, and JavaScript, I have developed an easy to use and a responsive web app to help calculate and compute the current GPA for a given set of classes for the semester/quarter.  </p>
-          </div>
+          <input type="submit" value="Send">
+        </form>
+      </div>
 
 
-      </article>
     </section>
 
   </main>
 
   <footer>
-      <a href="https://www.linkedin.com/in/tri-dao-595615123/" target="_blank" > LinkedIn </a>
-      <a href="https://github.com/tdao49" target="_blank" > GitHub </a>
-      <a href="https://www.facebook.com/tri.dao.31" target="_blank" > Facebook </a>
-      <a href="https://twitter.com/daoxtri"  target="_blank"> Twitter </a>
-      <p> &copy; Tri Xuan Dao 2017 </p>
+    <a href="https://www.linkedin.com/in/tri-dao-595615123/" target="_blank"> LinkedIn </a>
+    <a href="https://github.com/tdao49" target="_blank"> GitHub </a>
+    <a href="https://www.facebook.com/tri.dao.31" target="_blank"> Facebook </a>
+    <a href="https://twitter.com/daoxtri" target="_blank"> Twitter </a>
+    <p> &copy; Tri Xuan Dao 2017 </p>
   </footer>
-
 
 
 </body>
