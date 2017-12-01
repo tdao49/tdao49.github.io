@@ -1,4 +1,43 @@
+/*
+    Primary-Text: rgba(0,0,0,0.87)
+    Secondary Text; rgba(0,0,0,0.54)
+    Disable/hint text: rgba(0,0,0,0.38)
 
+    Primary color:  rgb(62, 80, 180)
+    Accent Color: rgb(255,63,128)
+
+*/
+
+.circle
+{
+    border-radius: 50%;
+    border: .2em solid rgba(62, 80, 180,.5);
+    overflow: hidden;
+    margin: 0;
+    width: 6.5em;
+    height: 6.5em;
+    line-height: 6.5em;
+    transition: all .3s ease-in-out;
+}
+
+
+.circle:hover {
+    background-color: green;
+    cursor: default;
+}
+
+
+hr{
+    width: 4em;
+    height: .05em;
+    background-color: rgba(0,0,0,0.38);
+    margin-top:0em;
+}
+
+.hidden
+{
+  visibility: hidden;
+}
 /* Navigation Bar */
 nav{
   margin: 0;
@@ -9,13 +48,13 @@ nav{
   right: 0;
   left: 0;
   z-index: 1;
-  background-color:black;
+  background-color: rgb(102, 102, 102);
 }
 
 nav a{
   display: inline-block;
   padding: .5em;
-  color:white;
+  color: white;
   font-size: 1em;
   text-decoration: none;
 }
@@ -23,6 +62,11 @@ nav a{
 nav a:hover{
   cursor: pointer;
   text-decoration: underline;
+  opacity: .8;
+}
+
+.active-nav-bar{
+  background-color: rgba(255, 255, 255, .3);
 }
 
 /* navigation into hamburger menu */
@@ -62,10 +106,13 @@ nav a:hover{
 body{
    padding: 0;
    margin: 0;
-   font-size: 4.7vh;
    color: black;
-   background-color: white;
-   font-family: 'Open Sans', serif;
+
+   background-color: #F5F5F5;
+
+   font-family: "Roboto & Noto", serif;
+   font-weight: 500;
+   font-size: 4.7vh;
 }
 
 
@@ -76,6 +123,13 @@ section{
     padding-bottom: 2em;
     padding-left: 1.2em;
     padding-right: 1.2em;
+    background-color: #FFFFFF;
+
+
+    margin: .5em;
+    border-radius: .6em;
+    box-shadow: 0 .3em .5em 0 rgba(0,0,0,0.4), 0 .3em .5em 0 rgba(0,0,0,0.6);
+
 
 }
 
@@ -86,12 +140,13 @@ section header{
 }
 
 section:nth-child(even){
-  background-color: #eceeef;
+  background-color: #E0E0E0;
 }
+
 section header h1{
     margin: 0;
     padding-bottom: .01em;
-    color:#03A9F4;
+    color:#008CBA;
     font-size: 1.2em;
 }
 
@@ -100,19 +155,19 @@ section header h1{
 
 /* home section sepcial Format */
 #home {
-    height: 20em;
+    height: 90vh;
 }
 #home header{
     top: 35%;
     position: relative;
 }
 #home header h1{
-  font-size: 2.5em;
-  color: black;
+  font-size: 9vw;
+  color: rgba(0, 0, 0, 1);
 }
 #home header p{
-  font-size: 1em;
-  color: black;
+  font-size: 3vw;
+  color: rgba(0, 0, 0, 1);
 }
 
 
@@ -121,7 +176,7 @@ section header h1{
 
 
 
-/*  background section*/
+/*  about section*/
 .my-image{
   text-align: center;
 }
@@ -136,43 +191,43 @@ section header h1{
     padding-top: .1em;
 }
 
-.my-image figcaption button{
-    width: 13em;
-    height: 4em;
-    background-color: #008CBA;
-    border-radius: 26px;
+.my-image figcaption a{
+    background-color: red;
+    border-radius: .2em;
+    font-size: .8em;
+    display:inline-block;
+    color:white;
+    padding: .3em .7em .3em .7em;
+    text-decoration: none;
+
 }
 
-.my-image figcaption button:hover{
+.my-image figcaption a:hover{
     background-color: rgb(34,139,34);
 }
 
-.my-image figcaption button a{
-    text-decoration: none;
-    font-size: 2em;
-    color: white;
-}
 
 
 
-.background-description {
+.about-description {
   overflow:hidden;
   line-height: 1.2em;
   font-size: .65em;
   margin: 0;
-
 }
 
- p {
-  color: #34495e;
+.about-description a {
+    text-decoration: none;
 }
 
-/* move image on top of the background description*/
+
+
+/* move image on top of the about description*/
 @media screen and (min-width: 55em) {
   .my-image{
     float:left;
   }
-  .background-description {
+  .about-description {
     text-align: justify;
   }
 }
@@ -190,12 +245,13 @@ section header h1{
 
 /* Experience and Projects Section header description */
 .section-header-description{
-  font-size: .7em;
+  font-size: .6em;
   padding-bottom: 1.5em;
   text-align: center;
   margin: 0;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  color: rgba(0,0,0,0.54);
 }
 
 
@@ -204,37 +260,47 @@ section header h1{
 
 /*  grid layout for experience section*/
 .experience-language-grid{
-  grid-column-start: col2;
-  grid-column-end: span 4;
+  grid-column-start: col1;
+  grid-column-end: span 5;
   text-align: center;
-  font-size: .6em;
-  border-style: outset;
-  border-width: 3px;
-  border-color: red;
-  background-color: #bdc3c7;
-  line-height: .8em;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.experience-language-grid .circle {
+    display: inline-block;
+    text-align: center;
+    font-size: .5em;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .experience-language-grid h2{
-    font-size: 2em;
+    font-size: 1em;
     text-decoration: underline;
+    text-align: center;
+    padding-bottom: .3em;
 }
 
 .experience-software-grid{
-  grid-column-start: col6;
-  grid-column-end: span 4;
-  text-align: center;
-  font-size: .6em;
-  border-style: outset;
-  border-color: red;
-  border-width: 3px;
-  background-color: #bdc3c7;
-  line-height: .8em;
+    grid-column-start: col6;
+    grid-column-end: span 5;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.experience-software-grid .circle{
+    display: inline-block;
+    text-align: center;
+    font-size: .5em;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .experience-software-grid h2{
-  font-size: 2em;
-  text-decoration: underline;
+    font-size: 1em;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: .3em;
 }
 
 /* Experience section merge two column into one column*/
@@ -254,13 +320,12 @@ section header h1{
 
 .individual-project{
     margin: 0;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-
-    padding-bottom: .5em;
+    padding: .2em 1.5em .5em 1.5em;
     text-align: justify;
-    border-style: inset;
-    background-color: #bdc3c7;
+    background-color: #FAFAFA;
+    margin: .5em;
+    border-radius: .6em;
+    box-shadow: 0 .3em .5em 0 rgba(0,0,0,0.4), 0 .3em .5em 0 rgba(0,0,0,0.6);
 }
 
 .individual-project h4{
@@ -269,14 +334,86 @@ section header h1{
     padding-bottom: .4em;
     text-decoration: underline;
     font-size: .8em;
+    color:: rgba(0,0,0,.87);
 }
 
 .individual-project p{
   margin: 0;
-  font-size: .5em;
+  font-size: .6em;
   font-style: normal;
+  color: rgba(0, 0, 0, 0.54);
 }
 
+.individual-project-lang-tool {
+    padding: .2em .5em .3em .5em;
+    font-size: .4em;
+    border: .2em solid darkblue;
+    color: darkblue;
+    display:inline-block;
+}
+
+.individual-project-lang-tool:hover{
+    background-color: green;
+    cursor: default;
+}
+
+
+
+/*  Contact */
+#contact .section-content{
+}
+
+
+#contact .section-content form{
+    text-align: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+#contact .section-content form input,textarea{
+    width: 100%;
+    padding: .5em;
+    font-size: .5em;
+    border-radius: .3em;
+}
+
+#contact .section-content form label{
+    width: 100%;
+    display: block;
+    padding-top: .4em;
+    padding-bottom: .2em;
+    text-align: left;
+    font-size: .7em;
+}
+
+#contact .section-content form input[type=submit]{
+    background-color: blue;
+    width: 5em;
+    text-align: center;
+    border-radius: .5em;
+    color:white;
+}
+
+#contact .section-content form input[type=submit]{
+    background-color: blue;
+    width: 4em;
+    text-align: center;
+    border-radius: .2em;
+    color:white;
+    transition: background-color .5s ease-in-out;
+    font-size: .7em;
+    padding: .2em;
+}
+
+
+#contact .section-content form input[type=submit]:hover{
+    background-color: rgba(0,255,0,1);
+    cursor: pointer;
+}
+
+#contact .section-content form input[type=submit]:active{
+    background-color: rgba(0,255,0,.5);
+}
 
 
 
@@ -287,7 +424,7 @@ footer{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #000000;
   text-align: center;
   color: white;
   margin: 0;
@@ -299,14 +436,21 @@ footer a{
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: .8em;
-  color: blue;
+  color: rgba(255,63,128,1);
+}
+
+footer a:hover{
+  text-decoration: underline;
+  opacity: .7;
+  cursor: pointer;
 }
 
 footer p{
     padding-bottom: .2em;
-    padding-top: .4em;
+    padding-top: .8em;
     margin: 0;
+    font-size: .5em;
     color: white;
 }
