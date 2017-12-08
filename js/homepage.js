@@ -2,7 +2,16 @@ var topNavHeight = 0;
 var hamburgerMenu = 'nav a:first-child';
 var navSectionLinks = 'nav a:not(:first-child)';
 
+var startColor = '#FC5B3F';
+var endColor = '#9ec64d';
+var circleProgressBar = 0;
+
 $(document).ready(function() {
+
+
+  skillBarAnimation();
+
+
   topNavHeight = $('nav').height();
   // onclick on the menu to navagation to different section of the page
   $(navSectionLinks).click(function() {
@@ -80,10 +89,17 @@ function addSectionAnimation() {
 
   // skills animation
   if (sectionInView('skills')) {
-    addAnimation('skills');
+      addAnimation('skills');
+      if(circleProgressBar == 1)
+      {
+        skillBarAnimation();
+        circleProgressBar = 0;
+      }
   }
   else {
+      circleProgressBar = 1;
       hiddenSection('skills');
+      $("svg").remove();
   }
 
   // projects animation
@@ -107,7 +123,8 @@ $(window).scroll(function() {
 
   var currentHeight = $(this).scrollTop();
 
-  var homeDivHeight = $('#home').height() / 1.5;
+  /* var homeDivHeight = $('#home').height() / 1.5; */
+  var homeDivHeight = $('#home').height();
   var aboutDivHeight = $('#about').height() + homeDivHeight;
   var experienceDivHeight = $('#skills').height() + aboutDivHeight;
   var projectsDivHeight = $('#projects').height() + experienceDivHeight;
@@ -147,4 +164,36 @@ function hiddenSection(secID) {
 function navBarCurrentSelection(divID) {
   $(navSectionLinks).removeClass();
   $('#' + divID + '-nav-bar').attr("class", "active-nav-bar");
+};
+
+
+
+
+function skillBarAnimation()
+{
+  var progressCircles =["html5-icon","css3-icon","python-icon","java-icon","cplusplus-icon","csharp-icon","javascript-icon","sql-icon",
+                        "k2-icon", "visualStudio-icon", "sqlServer-icon", "eclipse-icon", "sharepoint-icon", "atom-icon", "androidStudio-icon", "aws-icon"];
+  function createCircleProgress(divClass){
+      var circle = new ProgressBar.Circle('#'+divClass, {
+      color: startColor,
+	    duration: 1400,
+	    strokeWidth: 6,
+
+	    step: function(state, circle) {
+	        circle.path.setAttribute('stroke', state.color);
+	    }
+    });
+
+    // This will get the number from the page
+    var value = ($('#' + divClass).attr('value') / 100);
+    var barColor = $('#' + divClass).attr('color');
+    // This will determine the circumference of the circle
+    circle.animate(value, {
+	    from: {color: barColor},
+	    to: {color: barColor}
+ 	  });
+  }
+  for(var i=0;i< progressCircles.length;i++){
+     createCircleProgress(progressCircles[i]);
+  }
 };

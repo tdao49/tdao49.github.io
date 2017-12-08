@@ -7,16 +7,17 @@
     Accent Color: rgb(255,63,128)
 
 */
-
+/*
 .circle
 {
     border-radius: 50%;
     border: .2em solid rgba(62, 80, 180,.5);
     overflow: hidden;
     margin: 0;
-    width: 6.5em;
-    height: 6.5em;
-    line-height: 6.5em;
+    padding: .3em;
+    line-height: 6em;
+    width: 6em;
+    height: 6em;
     transition: all .3s ease-in-out;
 }
 
@@ -25,13 +26,47 @@
     background-color: green;
     cursor: default;
 }
+*/
+
+svg {
+    width: 100%;
+    display: block;
+}
+
+.circle-wrapper {
+    position: relative;
+    width: 7em;
+    height: 7em;
+    display: inline-block;
+    margin: .4em;
+}
+
+.circle-wrapper > .bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-wrapper > img {
+    /* Needs appropriate vendor prefixes */
+    box-sizing: border-box;
+
+    /* This needs to be equal to strokeWidth */
+    padding: 6%;
+    margin: 6%;
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+}
 
 
 hr{
     width: 4em;
     height: .05em;
     background-color: rgba(0,0,0,0.38);
-    margin-top:0em;
+    margin-top: 0em;
 }
 
 .hidden
@@ -48,14 +83,14 @@ nav{
   right: 0;
   left: 0;
   z-index: 1;
-  background-color: rgb(102, 102, 102);
+  background-color: #333;
 }
 
 nav a{
   display: inline-block;
   padding: .5em;
   color: white;
-  font-size: 1em;
+  font-size: .9em;
   text-decoration: none;
 }
 
@@ -110,9 +145,10 @@ body{
 
    background-color: #F5F5F5;
 
-   font-family: "Roboto & Noto", serif;
+   /*font-family: "Roboto & Noto", serif;*/
+   font-family: 'Libre Baskerville', serif;
    font-weight: 500;
-   font-size: 4.7vh;
+   font-size: 2.5vw;
 }
 
 
@@ -121,17 +157,17 @@ section{
     overflow: auto;
     /*padding-top: 1em;*/
     padding-bottom: 2em;
-    padding-left: 1.2em;
-    padding-right: 1.2em;
+    padding-left: 2em;
+    padding-right: 2em;
     background-color: #FFFFFF;
 
-
+    /*
     margin: .5em;
     border-radius: .6em;
     box-shadow: 0 .3em .5em 0 rgba(0,0,0,0.4), 0 .3em .5em 0 rgba(0,0,0,0.6);
-
-
+    */
 }
+
 
 section header{
   text-align: center;
@@ -139,35 +175,37 @@ section header{
   padding-bottom: .1em;
 }
 
-section:nth-child(even){
-  background-color: #E0E0E0;
+section:nth-child(odd){
+   background-color: #FEFEFE;
 }
 
 section header h1{
     margin: 0;
+    padding-top: .5em;
     padding-bottom: .01em;
     color:#008CBA;
-    font-size: 1.2em;
+    font-size: 1.7em;
 }
-
 
 
 
 /* home section sepcial Format */
 #home {
-    height: 90vh;
+    height: 92vh;
+    background-image: url("home-background.jpg");
+    background-attachment: fixed;
 }
 #home header{
     top: 35%;
     position: relative;
 }
 #home header h1{
-  font-size: 9vw;
-  color: rgba(0, 0, 0, 1);
+  font-size: 3em;
+  color: white;
 }
 #home header p{
-  font-size: 3vw;
-  color: rgba(0, 0, 0, 1);
+  font-size: 1em;
+  color: white;
 }
 
 
@@ -267,7 +305,7 @@ section header h1{
   padding-right: 5vw;
 }
 
-.experience-language-grid .circle {
+.experience-language-grid div {
     display: inline-block;
     text-align: center;
     font-size: .5em;
@@ -289,7 +327,7 @@ section header h1{
     padding-right: 5vw;
 }
 
-.experience-software-grid .circle{
+.experience-software-grid div{
     display: inline-block;
     text-align: center;
     font-size: .5em;
@@ -326,6 +364,7 @@ section header h1{
     margin: .5em;
     border-radius: .6em;
     box-shadow: 0 .3em .5em 0 rgba(0,0,0,0.4), 0 .3em .5em 0 rgba(0,0,0,0.6);
+    border: 3px solid grey;
 }
 
 .individual-project h4{
@@ -334,7 +373,7 @@ section header h1{
     padding-bottom: .4em;
     text-decoration: underline;
     font-size: .8em;
-    color:: rgba(0,0,0,.87);
+    color: rgba(0,0,0,.87);
 }
 
 .individual-project p{
@@ -433,12 +472,14 @@ footer{
 
 footer a{
   display: inline-block;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-decoration: none;
-  font-size: .8em;
-  color: rgba(255,63,128,1);
+  padding-top: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+footer img {
+    height: 1.7em;
+    width: 1.7em;
 }
 
 footer a:hover{
@@ -449,8 +490,8 @@ footer a:hover{
 
 footer p{
     padding-bottom: .2em;
-    padding-top: .8em;
+    padding-top: .5em;
     margin: 0;
-    font-size: .5em;
+    font-size: .7em;
     color: white;
 }
