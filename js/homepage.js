@@ -59,14 +59,16 @@ function sectionInView(secID)
   var sectionBot = sectionTop + $('#' + secID).height();
   var result = false;
 
-  if( (windowTop > sectionTop && windowTop < sectionBot)
-      ||  (windowBot > sectionTop && windowBot < sectionBot)
-      || (windowMid > sectionTop && windowMid < sectionBot))
+  if( (windowTop <= sectionTop && windowBot >= sectionBot)
+      ||  (windowBot >= sectionTop && windowBot <= sectionBot)
+      || (windowTop >= sectionTop && windowTop <= sectionBot)
+      || (windowMid >= sectionTop && windowMid <= sectionBot))
     {
       result = true;
     }
   return result;
 }
+
 function addSectionAnimation() {
 
   // home animation

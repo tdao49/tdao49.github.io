@@ -191,7 +191,7 @@ section header h1{
 
 /* home section sepcial Format */
 #home {
-    height: 92vh;
+    height: 97vh;
     background-image: url("home-background.jpg");
     background-attachment: fixed;
 }
@@ -394,13 +394,13 @@ section header h1{
 
 /* image and description layout format */
 .image-description-block {
-  padding: 1.2em;
+  padding: 1em;
   border: 3px solid rgba(218, 223, 225, 1);;
   box-shadow: rgba(218, 223, 225, 1) 0px 0.3em 0.5em 0px inset;
   background-color: 1em;
   display: block;
   overflow: hidden;
-  margin-top: 1em;
+  margin-top: .5em;
   border-radius: .6em;
 }
 
@@ -413,37 +413,38 @@ section header h1{
 
 
 .image-description-block figure img{
-  height: 9em;
-  width: 9em;
+  height: 6em;
+  width: 6em;
   padding: .28em 0 0 0;
 }
 
 .image-description-block .project-description{
   text-align: justify;
   display: block;
-    overflow: hidden;
+  overflow: hidden;
 }
 .project-title{
   display: inline;
 }
 
-.project-description .title{
+.project-description .project-title{
   margin: 0;
   padding: 0;
+  font-size: .9em;
 }
 
 .project-description .description-text{
   padding: .4em 0 0 0 ;
   margin: 0;
-  font-size: .7em;
+  font-size: .6em;
   font-style: normal;
   color: rgba(0, 0, 0, 0.54);
   line-height: 1.3em;
 }
 
 .link-icon{
-  width: .7em;
-  height: .7em;
+  width: .6em;
+  height: .6em;
 }
 
 .link-icon:hover{
